@@ -2,7 +2,6 @@ package contas
 
 import (
 	"github.com/evellyncosta/bancogolang/clientes"
-	//"banco/clientes"
 )
 
 type ContaCorrente struct {

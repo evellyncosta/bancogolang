@@ -3,15 +3,20 @@ package main
 import (
 	"fmt"
 
+	"github.com/evellyncosta/bancogolang/clientes"
 	"github.com/evellyncosta/bancogolang/contas"
 )
 
 func main() {
-	contaDaSilvia := contas.ContaCorrente{Titular: "Silvia", Saldo: 300}
-	contaDoGustavo := contas.ContaCorrente{Titular: "Gustavo", Saldo: 100}
-	status := contaDoGustavo.Transferir(200, &contaDaSilvia)
+	contaDoBruno := contas.ContaCorrente{Titular: clientes.Titular{
+		Nome:      "Bruno",
+		CPF:       "123.123.123-12",
+		Profissao: "Desenvolvedor"},
+		NumeroAgencia: 123,
+		NumeroConta:   12345,
+		Saldo:         100,
+	}
 
-	fmt.Println(status)
-	fmt.Println(contaDaSilvia)
-	fmt.Println(contaDoGustavo)
+	fmt.Println(contaDoBruno)
+
 }
